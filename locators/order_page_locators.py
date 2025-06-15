@@ -26,10 +26,10 @@ class OrderPageLocators:
     COMMENT_INPUT = (By.XPATH, '//input[@placeholder="Комментарий для курьера"]')
 
     # Кнопка "Заказать"
-    ORDER_SUBMIT_BUTTON = (By.XPATH, '//button[contains(text(), "Заказать")]')
+    ORDER_BUTTON_IN_FORM = (By.XPATH, "//button[contains(@class, 'Button_Button__ra12g') and contains(@class, 'Button_Middle__1CSJM') and text()='Заказать']")
 
     # Модальное окно подтверждения
-    CONFIRM_BUTTON = (By.XPATH, '//button[text()="Да"]')
+    CONFIRM_BUTTON = (By.XPATH, "//button[contains(text(),'Да')]")
 
     # Модальное окно об успешном заказе
     SUCCESS_MODAL = (By.CLASS_NAME, 'Order_ModalHeader__3FDaJ')

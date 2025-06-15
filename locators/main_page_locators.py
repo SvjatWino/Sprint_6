@@ -38,3 +38,6 @@ class MainPageLocators:
         (By.ID, "accordion__panel-6"),
         (By.ID, "accordion__panel-7"),
     ]
+
+    # Для принятия куков
+    COOKIE_ACCEPT_BUTTON = (By.ID, 'rcc-confirm-button')

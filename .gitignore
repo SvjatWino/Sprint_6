@@ -19,7 +19,6 @@ venv.bak/
 .vscode/
 
 # Allure reports
-allure-report/
 allure-results/
 
 # Pytest
