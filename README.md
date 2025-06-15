@@ -31,7 +31,7 @@ Sprint_6/
 │   ├── test_logo_click.py
 │   └── test_order_page.py
 │
-├── allure-results/         # Результаты тестов для Allure (добавлены в репозиторий)
+├── allure-report/         # Результаты тестов для Allure (добавлены в репозиторий)
 
 ```
 
