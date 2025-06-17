@@ -1,7 +1,6 @@
 import pytest
 import allure
 from pages.main_page import MainPage
-from selenium.webdriver.support.ui import WebDriverWait
 
 
 @allure.feature('Навигация по логотипам')
@@ -27,8 +26,6 @@ class TestLogoNavigation:
             page.open()
         with allure.step("Кликаем по логотипу Яндекса и переключаемся на новую вкладку"):
             page.click_logo_yandex()
-            WebDriverWait(driver, 10).until(lambda d: len(d.window_handles) > 1)
-            page.switch_to_new_tab()
-            WebDriverWait(driver, 10).until(lambda d: d.current_url != "about:blank")
+            page.wait_and_switch_to_new_tab()
         with allure.step("Проверяем, что новая вкладка содержит 'dzen.ru' в URL"):
             assert "dzen.ru" in page.get_current_url()

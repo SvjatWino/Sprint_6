@@ -9,6 +9,7 @@
 ```
 Sprint_6/
 │
+├── conftest.py             # Фикстуры
 ├── data.py                 # Тестовые данные
 ├── requirements.txt        # Зависимости
 ├── .gitignore              # Исключения для Git

@@ -36,14 +36,15 @@ class TestScooterOrder:
             )
 
         with allure.step("Заполняем данные аренды"):
-            order_page.fill_order_info(
-                date=user['date'],
-                comment=user['comment'],
-                color=user['color']
-            )
+            order_page.fill_date(user['date'])
+            order_page.select_rental_period(user['rental_period'])
+            order_page.select_color(user['color'])
+            order_page.fill_comment(user['comment'])
+            order_page.click_order_button_in_form()
 
         with allure.step("Подтверждаем заказ"):
-            order_page.submit_order()
+            order_page.confirm_order()
 
         with allure.step("Проверяем, что заказ оформлен успешно"):
-            assert order_page.order_successful()
+            success_message = order_page.get_success_message()
+            assert success_message is not None and success_message != "", "Ожидалось успешное сообщение о заказе"
